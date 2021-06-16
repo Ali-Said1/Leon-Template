@@ -1,6 +1,9 @@
 *{
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 :root{
   --maincolor: #10cab7;
   --mainfont:'Work Sans', sans-serif;
@@ -819,4 +822,5 @@ footer p a{
   footer p{
     font-size: 20px;
   }
+}
 /* Footer End */
