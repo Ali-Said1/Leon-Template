@@ -5,6 +5,7 @@
   --maincolor: #10cab7;
   --mainfont:'Work Sans', sans-serif;
 }
+/* Navigation Start */
 nav{
   width: 100%;
   height: 100px;
@@ -108,6 +109,14 @@ nav > .container .links ul li{
   height: 70px;
   display: flex;
   align-items: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+nav > .container .links ul li:hover{
+  padding-left: 30px;
 }
 nav > .container .links ul li a{
   text-decoration: none;
@@ -118,6 +127,7 @@ nav > .container .links ul li a{
 nav > .container .links ul li:not(:last-child){
   border-bottom: 3px solid rgb(173, 173, 173);
 }
+/* Navigation-End */
 /* header Start */
 header{
   background-color: #f6f6f6;
@@ -192,6 +202,18 @@ header div:not([class="Hello"]){
 }
 .content .work.lab{
   box-shadow: 10px 10px 5px rgb(218, 218, 218);
+}
+@media (min-width: 1025px) and (max-width: 1200px){
+  .content{
+    height: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .content .work{
+    width: calc((100% / 2) - 40px);
+    margin-top: 30px;
+  }
 }
 /* Content End */
 /* Services Start*/
@@ -314,6 +336,88 @@ header div:not([class="Hello"]){
   text-align: left;
   font-size: 15px;
 }
+@media (min-width: 1025px) and (max-width: 1200px){
+  .services{
+    height: 1000px;
+  }
+  .services .container .servicescontent .photo{
+    grid-column: 3 / span 4;
+    position: relative;
+    left: 10%;
+    grid-row: 1 span 5;
+  }
+  .services .container .servicescontent .photo div:first-child{
+    height: 100px;
+    width: 435px;
+  }
+  .services .container .servicescontent .photo div:first-child::before{
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+}
+.services .container .servicescontent{
+  height: 700px;
+  display: grid;
+  justify-content: center;
+  gap: 25px;
+  grid-template-columns: auto repeat(4, 1fr) auto repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr) 6fr auto repeat(2, 1fr) auto repeat(2, 1fr);
+}
+.services .container .servicescontent .graphic{
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+}
+.services .container .servicescontent .servicename{
+  grid-column: 2 / span 2;
+  grid-row: 7 / 8;
+}
+.services .container .servicescontent .design{
+  grid-column: 6 / 7;
+  grid-row: 7 / 8;
+}
+.services .container .servicescontent .servicename2{
+  grid-column: 7 / span 2;
+  grid-row: 7 / 8;
+}
+.services .container .servicescontent .description{
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  margin-top: 50px;
+}
+.services .container .servicescontent .description2{
+  grid-column: 7 / span 2;
+  grid-row: 7 / span 2;
+  margin-top: 50px;
+}
+.services .container .servicescontent .ui{
+  grid-column: 1 / 2;
+  grid-row: 10 / 11;
+}
+.services .container .servicescontent .servicename3{
+  grid-column: 2 / span 2;
+  grid-row: 10 / 11;
+}
+.services .container .servicescontent .webdev{
+  grid-column: 6 / 7;
+  grid-row: 10 / 11;
+}
+.services .container .servicescontent .servicename4{
+  grid-column: 7 / span 2;
+  grid-row: 10 / 11;
+}
+.services .container .servicescontent .description3{
+  grid-column: 2 / span 2;
+  grid-row: 11 / span 2;
+  margin-top: 50px;
+}
+.services .container .servicescontent .description4{
+  grid-column: 7 / span 2;
+  grid-row: 11 / span 2;
+  margin-top: 50px;
+}
+}
 /* Services End*/
 /* Potfolio Start */
 .Portfolio{
@@ -350,7 +454,6 @@ header div:not([class="Hello"]){
 .Portfolio .container .projects{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 0;
 }
@@ -376,6 +479,22 @@ header div:not([class="Hello"]){
   font-size: 15px;
   font-family: var(--mainfont);
   padding: 10px;
+}
+@media (min-width: 1025px) and (max-width: 1200px){
+  .Portfolio{
+    height: 1500px;
+  }
+  .Portfolio .container{
+    height: 1500px;
+  }
+  .Portfolio .container .projects{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .Portfolio .container .projects .project{
+    width: calc((100% / 2) - 30px);
+  }
 }
 /* Potfolio End */
 /* About Start */
@@ -480,6 +599,23 @@ header div:not([class="Hello"]){
   background-color: #30d1c1;
   width: 300px;
   height: 3px;
+}
+@media (min-width: 1025px) and (max-width: 1200px){
+  .about{
+    height: 1200px;
+  }
+  .about .container{
+    height: 1200px;
+  }
+  .about .container .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about .container .content .paragraphs{
+    width: 70%;
+    margin-bottom: 50px;
+  }
 }
 /* About End */
 /* Contact Start */
