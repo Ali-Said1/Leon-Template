@@ -130,6 +130,17 @@ nav > .container .links ul li a{
 nav > .container .links ul li:not(:last-child){
   border-bottom: 3px solid rgb(173, 173, 173);
 }
+@media (min-width: 481px) and (max-width: 768px){
+  nav{
+    width: 100%
+  }
+  nav .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px){
   nav .container{
     width: 90%;
@@ -219,7 +230,19 @@ header div:not([class="Hello"]){
 .content .work.lab{
   box-shadow: 10px 10px 5px rgb(218, 218, 218);
 }
-@media (max-width: 1200px){
+@media (min-width: 481px) and (max-width: 768px){
+  .content{
+    height: 1500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .content .work{
+    width: calc((100%) - 40px);
+    margin-top: 30px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px){
   .content{
     height: 1000px;
     display: flex;
@@ -351,6 +374,42 @@ header div:not([class="Hello"]){
 .services .container .servicescontent .title{
   text-align: left;
   font-size: 15px;
+}
+@media (min-width: 481px) and (max-width: 768px){
+  .services .container{
+    height: 1500px;
+    display: block;
+  }
+  .services .container .start .alphatitle{
+    font-size: 80px;
+  }
+  .services .container .start .coute{
+    font-size: 15px;
+    top: -40px;
+  }
+  .services .container .servicescontent{
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .services .container .servicescontent .photo div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+  .services .container .servicescontent .photo div:first-child::before{
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+}
 }
 @media (min-width: 769px) and (max-width: 1024px){
   .services{
@@ -573,7 +632,28 @@ header div:not([class="Hello"]){
   font-family: var(--mainfont);
   padding: 10px;
 }
-@media (max-width: 1200px){
+@media (min-width: 481px) and (max-width: 768px){
+  .Portfolio{
+    height: 1500px;
+    margin-top: 900px;
+  }
+  .Portfolio .container .start .alphatitle{
+    font-size: 80px;
+  }
+  .Portfolio .container .start .coute{
+    font-size: 15px;
+    top: -40px;
+  }
+  .Portfolio .container .projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Portfolio .container .projects .project{
+    width: calc(100% - 20px);
+  }
+}
+@media (min-width: 769) and (max-width: 1200px){
   .Portfolio{
     height: 1500px;
   }
@@ -693,6 +773,46 @@ header div:not([class="Hello"]){
   width: 300px;
   height: 3px;
 }
+@media (min-width: 481px) and (max-width: 768px){
+  .about{
+    width: 100%;
+    height: 500px;
+    margin-top: 500px;
+  }
+  .about .container{
+    width: 100%;
+    height: 500px;
+  }
+  .about .container .start .alphatitle{
+    font-size: 80px;
+  }
+  .about .container .start .coute{
+    font-size: 15px;
+    top: -40px;
+  }
+  .about .container .content{
+    display: block;
+    height: 1000px;
+  }
+  .about .container .content .Shape{
+    position: relative;
+    transform: scale(70%, 70%);
+    -webkit-transform: scale(70%, 70%);
+    -moz-transform: scale(70%, 70%);
+    -ms-transform: scale(70%, 70%);
+    -o-transform: scale(70%, 70%);
+    left: 5%;
+  }
+  .about .container .content > .Shape span:last-child{
+    top: -4%;
+    left: 0%;
+  }
+  .about .container .content .paragraphs{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+} 
 @media (min-width: 769px) and (max-width: 1024px){
   .about{
     height: 1200px;
@@ -739,6 +859,7 @@ header div:not([class="Hello"]){
 }
 /* About End */
 /* Contact Start */
+
 .contact{
   width: 100%;
   height: 500px;
@@ -796,6 +917,28 @@ header div:not([class="Hello"]){
   position: relative;
   top: 20px;
 }
+@media (min-width: 481px) and (max-width: 768px){
+  .contact{
+    height: 400px;
+    margin-top: 900px;
+  }
+  .contact .container{
+    height: 400px;
+  }
+  .contact .container .start .alphatitle{
+    font-size: 80px;
+  }
+  .contact .container .start .coute{
+    font-size: 15px;
+    top: -40px;
+  }
+  .contact .container .mail-social .bold{
+    font-size: 30px;
+  }
+  .contact .container .mail-social .mail a{
+    font-size: 30px;
+  }
+}
 /* Contact End */
 /* Footer Start */
 footer{
@@ -819,6 +962,11 @@ footer p a{
   font-weight: 300;
 }
 @media (min-width: 769px) and (max-width: 1024px){
+  footer p{
+    font-size: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px){
   footer p{
     font-size: 20px;
   }
